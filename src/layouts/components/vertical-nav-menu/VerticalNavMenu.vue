@@ -21,7 +21,9 @@
           class="app-logo me-3"
         ></v-img>
         <v-slide-x-transition>
-          <h2 class="app-title text--primary">DOĞA SİTESİ</h2>
+          <h2 class="app-title text--primary">
+            DOĞA SİTESİ
+          </h2>
         </v-slide-x-transition>
       </router-link>
     </div>
@@ -32,7 +34,9 @@
       <nav-menu-link title="Giderler" :to="{ name: 'giderler' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
       <nav-menu-link title="Aidat" :to="{ name: 'aidat' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
       <nav-menu-link title="Duyuru" :to="{ name: 'duyuru' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
-      <nav-menu-link title="Ayarlar" :to="{ name: 'settings' }"   :icon="icons.mdiAccountCogOutline"></nav-menu-link>
+      <nav-menu-link title="Bildirim" :to="{ name: 'bildirim' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Admin Ekle" :to="{ name: 'admin' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Ayarlar" :to="{ name: 'settings' }" :icon="icons.mdiAccountCogOutline"></nav-menu-link>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -61,7 +65,7 @@ export default {
       default: null,
     },
   },
-  setup() {
+  data() {
     return {
       icons: {
         mdiHomeOutline,

@@ -11,9 +11,11 @@
             :src="require('@/assets/images/avatars/3.png')"
             max-height="110px"
             max-width="110px"
+            alt="logo"
+            contain
+            class="me-3"
           ></v-img>
         </v-card-title>
-
         <!-- login form -->
         <v-card-text>
           <v-form>
@@ -23,9 +25,8 @@
               label="Kullanıcı Adı"
               placeholder="john@example.com"
               hide-details
-              class="mb-3"
+              class="mb-2"
             ></v-text-field>
-
             <v-text-field
               v-model="password"
               outlined
@@ -42,15 +43,16 @@
               class="mt-6"
               @click="saveProduct"
             >
-              Giriş
+              Kayıt Ol
             </v-btn>
           </v-form>
         </v-card-text>
 
+        <!-- create new account  -->
         <v-card-text class="d-flex align-center justify-center flex-wrap mt-2">
-          <span class="me-2"> Hesabın yok mu? </span>
-          <router-link :to="{ name: 'pages-register' }">
-            Kayıt Ol
+          <span class="me-2"> Hesabın var mı? </span>
+          <router-link :to="{ name: 'pages-login' }">
+            Giriş Yap
           </router-link>
         </v-card-text>
       </v-card>
@@ -59,18 +61,11 @@
 </template>
 
 <script>
-// eslint-disable-next-line object-curly-newline
 import { mdiEyeOutline, mdiEyeOffOutline } from '@mdi/js'
 import { ref } from '@vue/composition-api'
 import axios from 'axios'
 
 export default {
-  name: 'Login',
-  created() {
-    if (localStorage.value === 'true') {
-      this.$router.push('/')
-    }
-  },
   setup() {
     const isPasswordVisible = ref(false)
     const username = ref('')
@@ -91,30 +86,18 @@ export default {
     async saveProduct() {
       if (this.username.length > 0 && this.password.length > 0) {
         try {
-          const response = await axios.post('http://localhost/showUser', {
+          await axios.post('http://localhost/addUser', {
+            name: this.username,
             username: this.username,
+            password: this.password,
+            address: 's',
+            date: 'ss',
           })
-          if (response.data.data.password === this.password) {
-            if (localStorage.value === 'true') {
-              localStorage.value = 'false'
-            } else {
-              localStorage.value = 'true'
-            }
-
-            localStorage.id = response.data.data.id
-            localStorage.user = response.data.data.user_type
-            console.log(localStorage.user)
-            this.$router.push('/')
-          } else {
-            console.log('Kullanıcı Yok ya da şifre yanlış')
-            this.username = ''
-            this.password = ''
-          }
         } catch (err) {
           console.log(err)
         }
       } else {
-        console.log(localStorage.value)
+        console.log('Şifre Yanlış')
       }
     },
   },

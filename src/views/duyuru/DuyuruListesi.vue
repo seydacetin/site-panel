@@ -1,6 +1,12 @@
 <template>
   <v-card>
-    <v-data-table :headers="headers" :items="usreList" class="table-rounded" hide-default-footer disable-sort>
+    <v-data-table
+      :headers="headers"
+      :items="usreList"
+      class="table-rounded"
+      hide-default-footer
+      disable-sort
+    >
       <!-- name -->
       <template #[`item.name`]="{ item }">
         <div class="d-flex flex-column">

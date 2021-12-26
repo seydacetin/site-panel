@@ -1,7 +1,6 @@
 <template>
   <v-card>
-    <v-card-title>Gider Ekle</v-card-title
-    ><v-card-text>
+    <v-card-title>Gider Ekle</v-card-title><v-card-text>
       <v-form>
         <v-text-field
           v-model="title"
@@ -26,7 +25,12 @@
           placeholder="Ücret"
         ></v-text-field>
 
-        <v-btn @click="saveProduct" color="primary"> Kaydet </v-btn>
+        <v-btn
+          color="primary"
+          @click="saveProduct"
+        >
+          Kaydet
+        </v-btn>
       </v-form>
     </v-card-text>
   </v-card>

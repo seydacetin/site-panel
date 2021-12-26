@@ -35,6 +35,13 @@
             </h3>
           </div>
         </v-col>
+           <v-img
+          max-width="550"
+          float="left"
+          src="@/assets/images/3d-characters/a.png"
+          class="security-character"
+          style="margin-top:220px; margin-left:200px"
+        ></v-img>
       </v-row>
     </v-card-text>
   </v-card>

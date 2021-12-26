@@ -20,9 +20,8 @@
       </v-tab-item>
 
       <v-tab-item>
-       <sablon-ekle></sablon-ekle>
+        <sablon-ekle></sablon-ekle>
       </v-tab-item>
-
     </v-tabs-items>
   </v-card>
 </template>
