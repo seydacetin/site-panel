@@ -32,6 +32,7 @@
     </div>
 
     <!-- Navigation Items -->
+<<<<<<< HEAD
     <v-list
       expand
       shaped
@@ -77,6 +78,16 @@
         :to="{ name: 'settings' }"
         :icon="icons.mdiAccountCogOutline"
       ></nav-menu-link>
+=======
+    <v-list expand shaped class="vertical-nav-menu-items pr-5">
+      <nav-menu-link title="Ana Sayfa" :to="{ name: 'dashboard' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Giderler" :to="{ name: 'giderler' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Aidat" :to="{ name: 'aidat' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Duyuru" :to="{ name: 'duyuru' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Bildirim" :to="{ name: 'bildirim' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Admin Ekle" :to="{ name: 'admin' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Ayarlar" :to="{ name: 'settings' }" :icon="icons.mdiAccountCogOutline"></nav-menu-link>
+>>>>>>> e600b86a005080f876a147cae2d932a70211a65a
     </v-list>
   </v-navigation-drawer>
 </template>

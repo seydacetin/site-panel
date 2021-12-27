@@ -1,9 +1,13 @@
 <template>
   <v-row>
+<<<<<<< HEAD
     <v-col
       cols="12"
       md="12"
     >
+=======
+    <v-col cols="12" md="12">
+>>>>>>> e600b86a005080f876a147cae2d932a70211a65a
       <dashboard-statistics-card></dashboard-statistics-card>
     </v-col>
   </v-row>

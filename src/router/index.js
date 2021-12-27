@@ -19,11 +19,14 @@ const routes = [
     component: () => import('@/views/pages/Admin.vue'),
   },
   {
+<<<<<<< HEAD
     path: '/payment',
     name: 'payment',
     component: () => import('@/views/payment/Payment.vue'),
   },
   {
+=======
+>>>>>>> e600b86a005080f876a147cae2d932a70211a65a
     path: '/typography',
     name: 'typography',
     component: () => import('@/views/typography/Typography.vue'),
