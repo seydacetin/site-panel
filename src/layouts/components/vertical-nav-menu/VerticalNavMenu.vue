@@ -10,7 +10,10 @@
   >
     <!-- Navigation Header -->
     <div class="vertical-nav-header d-flex items-center ps-6 pe-5 pt-5 pb-2">
-      <router-link to="/" class="d-flex align-center text-decoration-none">
+      <router-link
+        to="/"
+        class="d-flex align-center text-decoration-none"
+      >
         <v-img
           :src="require('@/assets/images/logos/apt.png')"
           max-height="90px"
@@ -21,18 +24,59 @@
           class="app-logo me-3"
         ></v-img>
         <v-slide-x-transition>
-          <h2 class="app-title text--primary">DOĞA SİTESİ</h2>
+          <h2 class="app-title text--primary">
+            DOĞA SİTESİ
+          </h2>
         </v-slide-x-transition>
       </router-link>
     </div>
 
     <!-- Navigation Items -->
-    <v-list expand shaped class="vertical-nav-menu-items pr-5">
-      <nav-menu-link title="Ana Sayfa" :to="{ name: 'dashboard' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
-      <nav-menu-link title="Giderler" :to="{ name: 'giderler' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
-      <nav-menu-link title="Aidat" :to="{ name: 'aidat' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
-      <nav-menu-link title="Duyuru" :to="{ name: 'duyuru' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
-      <nav-menu-link title="Ayarlar" :to="{ name: 'settings' }"   :icon="icons.mdiAccountCogOutline"></nav-menu-link>
+    <v-list
+      expand
+      shaped
+      class="vertical-nav-menu-items pr-5"
+    >
+      <nav-menu-link
+        title="Ana Sayfa"
+        :to="{ name: 'dashboard' }"
+        :icon="icons.mdiHomeOutline"
+      ></nav-menu-link>
+      <nav-menu-link
+        title="Giderler"
+        :to="{ name: 'giderler' }"
+        :icon="icons.mdiHomeOutline"
+      ></nav-menu-link>
+      <nav-menu-link
+        title="Aidat"
+        :to="{ name: 'aidat' }"
+        :icon="icons.mdiHomeOutline"
+      ></nav-menu-link>
+      <nav-menu-link
+        title="Duyuru"
+        :to="{ name: 'duyuru' }"
+        :icon="icons.mdiHomeOutline"
+      ></nav-menu-link>
+      <nav-menu-link
+        title="Bildirim"
+        :to="{ name: 'bildirim' }"
+        :icon="icons.mdiHomeOutline"
+      ></nav-menu-link>
+      <nav-menu-link
+        title="Admin Ekle"
+        :to="{ name: 'admin' }"
+        :icon="icons.mdiHomeOutline"
+      ></nav-menu-link>
+      <nav-menu-link
+        title="Ödeme Ekranı"
+        :to="{ name: 'payment' }"
+        :icon="icons.mdiHomeOutline"
+      ></nav-menu-link>
+      <nav-menu-link
+        title="Ayarlar"
+        :to="{ name: 'settings' }"
+        :icon="icons.mdiAccountCogOutline"
+      ></nav-menu-link>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -61,7 +105,7 @@ export default {
       default: null,
     },
   },
-  setup() {
+  data() {
     return {
       icons: {
         mdiHomeOutline,

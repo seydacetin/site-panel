@@ -14,6 +14,16 @@ const routes = [
     component: () => import('@/views/dashboard/Dashboard.vue'),
   },
   {
+    path: '/admin',
+    name: 'admin',
+    component: () => import('@/views/pages/Admin.vue'),
+  },
+  {
+    path: '/payment',
+    name: 'payment',
+    component: () => import('@/views/payment/Payment.vue'),
+  },
+  {
     path: '/typography',
     name: 'typography',
     component: () => import('@/views/typography/Typography.vue'),
@@ -32,6 +42,11 @@ const routes = [
     path: '/duyuru',
     name: 'duyuru',
     component: () => import('@/views/duyuru/Duyuru.vue'),
+  },
+  {
+    path: '/bildirim',
+    name: 'bildirim',
+    component: () => import('@/views/bildirim/Bildirim.vue'),
   },
   {
     path: '/sablon',

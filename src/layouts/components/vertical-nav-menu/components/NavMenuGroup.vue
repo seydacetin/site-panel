@@ -6,7 +6,7 @@
     <template #prependIcon>
       <v-icon :class="{'alternate-icon-small': !icon}">
         {{ icon }}
-      </v-icon>
+      </v-mdiHomeOutline>
     </template>
     <template #activator>
       <v-list-item-title>

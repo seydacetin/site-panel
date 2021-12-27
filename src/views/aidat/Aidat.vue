@@ -1,8 +1,14 @@
 <template>
   <v-card id="account-setting-card">
     <!-- tabs -->
-    <v-tabs v-model="tab" show-arrows>
-      <v-tab v-for="tab in tabs" :key="tab.icon">
+    <v-tabs
+      v-model="tab"
+      show-arrows
+    >
+      <v-tab
+        v-for="tab in tabs"
+        :key="tab.icon"
+      >
         <span>{{ tab.title }}</span>
       </v-tab>
     </v-tabs>

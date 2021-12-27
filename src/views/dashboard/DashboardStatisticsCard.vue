@@ -14,7 +14,7 @@
         >
           <v-avatar
             size="44"
-            :color="resolveStatisticsIconVariation (data.title).color"
+            :color="resolveStatisticsIconVariation(data.title).color"
             rounded
             class="elevation-1"
           >
@@ -23,7 +23,7 @@
               color="white"
               size="30"
             >
-              {{ resolveStatisticsIconVariation (data.title).icon }}
+              {{ resolveStatisticsIconVariation(data.title).icon }}
             </v-icon>
           </v-avatar>
           <div class="ms-3">
@@ -35,6 +35,13 @@
             </h3>
           </div>
         </v-col>
+        <v-img
+          max-width="550"
+          float="left"
+          src="@/assets/images/3d-characters/a.png"
+          class="security-character"
+          style="margin-top:220px; margin-left:200px"
+        ></v-img>
       </v-row>
     </v-card-text>
   </v-card>
@@ -42,7 +49,14 @@
 
 <script>
 // eslint-disable-next-line object-curly-newline
-import { mdiAccountOutline, mdiCurrencyUsd, mdiTrendingUp, mdiDotsVertical, mdiLabelOutline, mdiOfficeBuilding } from '@mdi/js'
+import {
+  mdiAccountOutline,
+  mdiCurrencyUsd,
+  mdiTrendingUp,
+  mdiDotsVertical,
+  mdiLabelOutline,
+  mdiOfficeBuilding,
+} from '@mdi/js'
 import axios from 'axios'
 
 export default {
@@ -102,7 +116,7 @@ export default {
         // eslint-disable-next-line no-plusplus
         for (let i = 0; i < response.data.length; i++) {
           // eslint-disable-next-line radix
-          (this.statisticsData[3].total) += parseInt(response.data[i].price)
+          this.statisticsData[3].total += parseInt(response.data[i].price)
         }
       } catch (err) {
         console.log(err)
@@ -116,7 +130,7 @@ export default {
         // eslint-disable-next-line no-plusplus
         for (let i = 0; i < response.data.length; i++) {
           // eslint-disable-next-line radix
-          (this.statisticsData[2].total) = parseInt(response.data.length)
+          this.statisticsData[2].total = parseInt(response.data.length)
         }
       } catch (err) {
         console.log(err)
@@ -130,7 +144,7 @@ export default {
         // eslint-disable-next-line no-plusplus
         for (let i = 0; i < response.data.length; i++) {
           // eslint-disable-next-line radix
-          (this.statisticsData[1].total) = parseInt(response.data.length)
+          this.statisticsData[1].total = parseInt(response.data.length)
         }
       } catch (err) {
         console.log(err)

@@ -79,7 +79,7 @@
             <v-btn
               color="primary"
               class="me-3 mt-4"
-              @click='updateUser'
+              @click="updateUser"
             >
               DEĞİŞİKLİKLERİ KAYDET
             </v-btn>

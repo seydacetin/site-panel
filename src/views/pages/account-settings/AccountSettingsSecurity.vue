@@ -72,7 +72,7 @@
           <v-btn
             color="primary"
             class="me-3 mt-3"
-            @click='updateUser'
+            @click="updateUser"
           >
             DEĞİŞTİR
           </v-btn>

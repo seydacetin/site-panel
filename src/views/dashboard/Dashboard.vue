@@ -2,7 +2,7 @@
   <v-row>
     <v-col
       cols="12"
-      md="8"
+      md="12"
     >
       <dashboard-statistics-card></dashboard-statistics-card>
     </v-col>
@@ -19,7 +19,6 @@ import DashboardStatisticsCard from './DashboardStatisticsCard.vue'
 export default {
   components: {
     DashboardStatisticsCard,
-
   },
   created() {
     if (localStorage.value === 'false') {

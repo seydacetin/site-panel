@@ -1,10 +1,17 @@
 <template>
-  <v-card flat class="mt-5">
+  <v-card
+    flat
+    class="mt-5"
+  >
     <v-form>
       <div class="px-3">
         <v-card-text class="pt-5">
           <v-row>
-            <v-col cols="12" sm="8" md="6">
+            <v-col
+              cols="12"
+              sm="8"
+              md="6"
+            >
               <!-- current password -->
               <v-text-field
                 v-model="currentPassword"
@@ -39,7 +46,12 @@
               ></v-text-field>
             </v-col>
 
-            <v-col cols="12" sm="4" md="6" class="d-none d-sm-flex justify-center position-relative">
+            <v-col
+              cols="12"
+              sm="4"
+              md="6"
+              class="d-none d-sm-flex justify-center position-relative"
+            >
               <v-img
                 contain
                 max-width="170"
@@ -57,7 +69,13 @@
       <div class="pa-3">
         <!-- action buttons -->
         <v-card-text>
-          <v-btn color="primary" class="me-3 mt-3" @click="updateUser"> DEĞİŞTİR </v-btn>
+          <v-btn
+            color="primary"
+            class="me-3 mt-3"
+            @click="updateUser"
+          >
+            DEĞİŞTİR
+          </v-btn>
         </v-card-text>
       </div>
     </v-form>

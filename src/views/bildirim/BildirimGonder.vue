@@ -1,7 +1,16 @@
 <template>
   <v-card>
-    <v-card-title>Duyuru Gönder</v-card-title><v-card-text>
+    <v-card-title>Bildirim Gönder</v-card-title><v-card-text>
       <v-form>
+        <v-text-field
+          v-model="name"
+          :prepend-inner-icon="icons.mdiAccountOutline"
+          label="Ad-Soyad"
+          outlined
+          dense
+          placeholder="Ad-Soyad"
+        ></v-text-field>
+
         <v-text-field
           v-model="name"
           :prepend-inner-icon="icons.mdiAccountOutline"
