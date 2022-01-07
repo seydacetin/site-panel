@@ -1,12 +1,6 @@
 <template>
   <v-card>
-    <v-data-table
-      :headers="headers"
-      :items="usreList"
-      class="table-rounded"
-      hide-default-footer
-      disable-sort
-    >
+    <v-data-table :headers="headers" :items="usreList" class="table-rounded" hide-default-footer disable-sort>
       <!-- name -->
       <template #[`item.title`]="{item}">
         <div class="d-flex flex-column">
@@ -25,7 +19,8 @@
           <span class="d-block font-weight-semibold text--primary text-truncate">{{ item.price }}</span>
         </div>
       </template>
-       <template #[`item.date`]="{item}">
+
+      <template #[`item.date`]="{item}">
         <div class="d-flex flex-column">
           <span class="d-block font-weight-semibold text--primary text-truncate">{{ item.date }}</span>
         </div>
@@ -33,12 +28,7 @@
 
       <template #[`item.delete`]="{item}">
         <div class="d-flex flex-column">
-          <v-btn
-            type="reset"
-            outlined
-            @click='deleteUser(item.id)'
-            class="mx-2"
-          >
+          <v-btn type="reset" outlined class="mx-2" @click="deleteGider(item.id)">
             Sil
           </v-btn>
         </div>
@@ -52,7 +42,6 @@ import { mdiSquareEditOutline, mdiDotsVertical } from '@mdi/js'
 import axios from 'axios'
 
 export default {
-
   data() {
     return {
       headers: [
@@ -64,13 +53,6 @@ export default {
       ],
       usreList: [],
       id: '',
-      status: {
-        1: 'Current',
-        2: 'Professional',
-        3: 'Rejected',
-        4: 'Resigned',
-        5: 'Applied',
-      },
       icons: {
         mdiSquareEditOutline,
         mdiDotsVertical,
@@ -78,17 +60,18 @@ export default {
     }
   },
   created() {
-    this.getUsers()
+    this.showGider()
   },
   methods: {
     // Get All Products
-    async getUsers() {
+    async showGider() {
       const { id } = localStorage
       console.log(id)
       try {
         const response = await axios.get(`http://localhost/showGider/${id}`)
-        this.usreList = response.data
+        console.log('burada')
         console.log(response.data)
+        this.usreList = response.data.data
       } catch (err) {
         console.log(err)
       }
@@ -96,10 +79,10 @@ export default {
     async editUser(id) {
       console.log(id)
     },
-    async deleteUser(id) {
+    async deleteGider(id) {
       try {
         await axios.delete(`http://localhost/deleteGider/${id}`)
-        this.getUsers()
+        this.showGider()
       } catch (err) {
         console.log(err)
       }

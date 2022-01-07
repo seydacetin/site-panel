@@ -26,7 +26,9 @@
             :to="{ name: 'sablonDuzenle', params: { id: item.id } }"
             style="margin: 5px"
             class="button is-info is-small"
-          >Düzenle</router-link>
+          >
+            Düzenle
+          </router-link>
         </div>
       </template>
 
@@ -35,8 +37,8 @@
           <v-btn
             type="reset"
             outlined
-            @click='deleteUser(item.id)'
             class="mx-2"
+            @click="deleteUser(item.id)"
           >
             Sil
           </v-btn>

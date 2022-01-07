@@ -1,6 +1,9 @@
 <template>
   <div class="auth-wrapper auth-v1">
-    <div class="auth-inner" style="margin: 10% 30% 0% 30%">
+    <div
+      class="auth-inner"
+      style="margin: 10% 30% 0% 30%"
+    >
       <v-card class="auth-card">
         <!-- logo -->
         <v-card-title class="d-flex align-center justify-center py-7">
@@ -34,14 +37,23 @@
               hide-details
               @click:append="isPasswordVisible = !isPasswordVisible"
             ></v-text-field>
-            <v-btn block color="primary" class="mt-6" @click="saveProduct"> Kayıt Ol </v-btn>
+            <v-btn
+              block
+              color="primary"
+              class="mt-6"
+              @click="saveProduct"
+            >
+              Kayıt Ol
+            </v-btn>
           </v-form>
         </v-card-text>
 
         <!-- create new account  -->
         <v-card-text class="d-flex align-center justify-center flex-wrap mt-2">
           <span class="me-2"> Hesabın var mı? </span>
-          <router-link :to="{ name: 'pages-login' }"> Giriş Yap </router-link>
+          <router-link :to="{ name: 'pages-login' }">
+            Giriş Yap
+          </router-link>
         </v-card-text>
       </v-card>
     </div>

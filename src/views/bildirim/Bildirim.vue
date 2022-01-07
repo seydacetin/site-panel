@@ -16,10 +16,11 @@
     <!-- tabs item -->
     <v-tabs-items v-model="tab">
       <v-tab-item>
-        <gider-listesi></gider-listesi>
+        <bildirim-listesi> </bildirim-listesi>
       </v-tab-item>
+
       <v-tab-item>
-        <gider-ekle></gider-ekle>
+        <bildirim-gonder> </bildirim-gonder>
       </v-tab-item>
     </v-tabs-items>
   </v-card>
@@ -28,13 +29,13 @@
 <script>
 import { ref } from '@vue/composition-api'
 
-import GiderListesi from './GiderListesi.vue'
-import GiderEkle from './GiderEkle.vue'
+import BildirimListesi from './BildirimListesi.vue'
+import BildirimGonder from './BildirimGonder.vue'
 
 export default {
   components: {
-    GiderListesi,
-    GiderEkle,
+    BildirimListesi,
+    BildirimGonder,
   },
   created() {
     if (localStorage.value === 'false') {
@@ -45,9 +46,8 @@ export default {
     const tab = ref('')
 
     const tabs = [
-      { title: 'Gider Listesi' },
-      { title: 'Gider Ekle' },
-
+      { title: 'Bildirim Listesi' },
+      { title: 'Bildirim Gönder' },
     ]
 
     return {

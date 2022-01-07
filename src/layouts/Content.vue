@@ -1,6 +1,11 @@
 <template>
   <v-app>
-    <vertical-nav-menu :is-drawer-open.sync="isDrawerOpen"></vertical-nav-menu>
+    <div>
+      <vertical-nav-menu :is-drawer-open.sync="isDrawerOpen"></vertical-nav-menu>
+    </div>
+    <div>
+      <admin-menu :is-drawer-open.sync="isDrawerOpen"></admin-menu>
+    </div>
 
     <v-app-bar
       app
@@ -71,13 +76,10 @@ export default {
     ThemeSwitcher,
     AppBarUserMenu,
   },
-  setup() {
-    const isDrawerOpen = ref(null)
-
+  data() {
     return {
-      isDrawerOpen,
-
-      // Icons
+      user: 0,
+      isDrawerOpen: ref(null),
       icons: {
         mdiMagnify,
         mdiBellOutline,

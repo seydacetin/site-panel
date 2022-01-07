@@ -1,8 +1,14 @@
 <template>
   <v-card id="account-setting-card">
     <!-- tabs -->
-    <v-tabs v-model="tab" show-arrows>
-      <v-tab v-for="tab in tabs" :key="tab.icon">
+    <v-tabs
+      v-model="tab"
+      show-arrows
+    >
+      <v-tab
+        v-for="tab in tabs"
+        :key="tab.icon"
+      >
         <span>{{ tab.title }}</span>
       </v-tab>
     </v-tabs>
@@ -20,6 +26,7 @@
 import { ref } from '@vue/composition-api'
 
 import PasswordSetting from './PasswordSetting.vue'
+
 export default {
   components: {
     PasswordSetting,
@@ -32,6 +39,7 @@ export default {
   setup() {
     const tab = ref('')
     const tabs = [{ title: 'Ayarlar' }]
+
     return {
       tab,
       tabs,

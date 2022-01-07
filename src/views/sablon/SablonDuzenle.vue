@@ -1,30 +1,33 @@
 <template>
   <v-card>
     <v-card-title>Şablon Ekle</v-card-title><v-card-text>
-    <v-form>
-      <v-text-field
-        v-model="title"
-        :prepend-inner-icon="icons.mdiAccountOutline"
-        label="Ad Soyad"
-        outlined
-        dense
-        placeholder="Ad Soyad"
-      ></v-text-field>
+      <v-form>
+        <v-text-field
+          v-model="title"
+          :prepend-inner-icon="icons.mdiAccountOutline"
+          label="Ad Soyad"
+          outlined
+          dense
+          placeholder="Ad Soyad"
+        ></v-text-field>
 
-      <v-text-field
-        v-model="content"
-        :prepend-inner-icon="icons.mdiAccountOutline"
-        label="Ad Soyad"
-        outlined
-        dense
-        placeholder="Ad Soyad"
-      ></v-text-field>
+        <v-text-field
+          v-model="content"
+          :prepend-inner-icon="icons.mdiAccountOutline"
+          label="Ad Soyad"
+          outlined
+          dense
+          placeholder="Ad Soyad"
+        ></v-text-field>
 
-      <v-btn  @click='updateUser' color="primary">
-        Güncelle
-      </v-btn>
-    </v-form>
-  </v-card-text>
+        <v-btn
+          color="primary"
+          @click="updateUser"
+        >
+          Güncelle
+        </v-btn>
+      </v-form>
+    </v-card-text>
   </v-card>
 </template>
 
