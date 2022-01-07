@@ -32,6 +32,10 @@
     </div>
 
     <!-- Navigation Items -->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aaaacdd4b2fcbb7f42f6cde480ee8b507d9f87b5
     <v-list
       expand
       shaped
@@ -68,10 +72,31 @@
         :icon="icons.mdiHomeOutline"
       ></nav-menu-link>
       <nav-menu-link
+<<<<<<< HEAD
+=======
+        title="Ödeme Ekranı"
+        :to="{ name: 'payment' }"
+        :icon="icons.mdiHomeOutline"
+      ></nav-menu-link>
+      <nav-menu-link
+>>>>>>> aaaacdd4b2fcbb7f42f6cde480ee8b507d9f87b5
         title="Ayarlar"
         :to="{ name: 'settings' }"
         :icon="icons.mdiAccountCogOutline"
       ></nav-menu-link>
+<<<<<<< HEAD
+=======
+=======
+    <v-list expand shaped class="vertical-nav-menu-items pr-5">
+      <nav-menu-link title="Ana Sayfa" :to="{ name: 'dashboard' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Giderler" :to="{ name: 'giderler' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Aidat" :to="{ name: 'aidat' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Duyuru" :to="{ name: 'duyuru' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Bildirim" :to="{ name: 'bildirim' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Admin Ekle" :to="{ name: 'admin' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-link title="Ayarlar" :to="{ name: 'settings' }" :icon="icons.mdiAccountCogOutline"></nav-menu-link>
+>>>>>>> e600b86a005080f876a147cae2d932a70211a65a
+>>>>>>> aaaacdd4b2fcbb7f42f6cde480ee8b507d9f87b5
     </v-list>
   </v-navigation-drawer>
 </template>

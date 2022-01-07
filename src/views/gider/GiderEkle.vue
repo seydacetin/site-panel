@@ -1,7 +1,6 @@
 <template>
   <v-card>
-    <v-card-title>Gider Ekle</v-card-title
-    ><v-card-text>
+    <v-card-title>Gider Ekle</v-card-title><v-card-text>
       <v-form>
         <v-text-field v-model="title" label="Gider Adı" outlined dense placeholder="Gider Adı"></v-text-field>
         <v-text-field
@@ -13,7 +12,14 @@
         ></v-text-field>
         <v-text-field v-model="price" label="Ücret" outlined dense placeholder="Ücret"></v-text-field>
 
+<<<<<<< HEAD
         <v-btn color="primary" @click="saveProduct">
+=======
+        <v-btn
+          color="primary"
+          @click="saveProduct"
+        >
+>>>>>>> aaaacdd4b2fcbb7f42f6cde480ee8b507d9f87b5
           Kaydet
         </v-btn>
       </v-form>

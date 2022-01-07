@@ -35,7 +35,15 @@
             </h3>
           </div>
         </v-col>
+<<<<<<< HEAD
         <v-img
+=======
+<<<<<<< HEAD
+        <v-img
+=======
+           <v-img
+>>>>>>> e600b86a005080f876a147cae2d932a70211a65a
+>>>>>>> aaaacdd4b2fcbb7f42f6cde480ee8b507d9f87b5
           max-width="550"
           float="left"
           src="@/assets/images/3d-characters/a.png"

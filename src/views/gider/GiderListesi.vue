@@ -19,7 +19,10 @@
           <span class="d-block font-weight-semibold text--primary text-truncate">{{ item.price }}</span>
         </div>
       </template>
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaaacdd4b2fcbb7f42f6cde480ee8b507d9f87b5
       <template #[`item.date`]="{item}">
         <div class="d-flex flex-column">
           <span class="d-block font-weight-semibold text--primary text-truncate">{{ item.date }}</span>
@@ -28,7 +31,16 @@
 
       <template #[`item.delete`]="{item}">
         <div class="d-flex flex-column">
+<<<<<<< HEAD
           <v-btn type="reset" outlined class="mx-2" @click="deleteGider(item.id)">
+=======
+          <v-btn
+            type="reset"
+            outlined
+            class="mx-2"
+            @click="deleteUser(item.id)"
+          >
+>>>>>>> aaaacdd4b2fcbb7f42f6cde480ee8b507d9f87b5
             Sil
           </v-btn>
         </div>

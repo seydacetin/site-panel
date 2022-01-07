@@ -1,7 +1,6 @@
 <template>
   <v-card>
-    <v-card-title>Duyuru Gönder</v-card-title
-    ><v-card-text>
+    <v-card-title>Duyuru Gönder</v-card-title><v-card-text>
       <v-form>
         <v-text-field v-model="title" label="Başlık" outlined dense placeholder="Başlık"></v-text-field>
         <v-text-field
@@ -12,7 +11,22 @@
           placeholder="Duyuru"
         ></v-text-field>
 
+<<<<<<< HEAD
         <v-btn color="primary" @click="saveProduct">
+=======
+        <v-text-field
+          v-model="messsage"
+          :prepend-inner-icon="icons.mdiAccountOutline"
+          label="Mesaj"
+          outlined
+          dense
+          placeholder="Mesaj"
+        ></v-text-field>
+        <v-btn
+          color="primary"
+          @click="sendMessage"
+        >
+>>>>>>> aaaacdd4b2fcbb7f42f6cde480ee8b507d9f87b5
           Gönder
         </v-btn>
       </v-form>
